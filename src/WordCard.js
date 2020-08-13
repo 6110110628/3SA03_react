@@ -1,7 +1,10 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
+import _ from 'lodash';
 
 export default function WordCard(props){
+
+    const [state, setState] = useState(pr)
     
     const activationHandler = c => { 
         console.log(`${c} has been activated.`) 
