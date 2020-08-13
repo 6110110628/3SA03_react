@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import WordCard from './WordCard';
+//import WordCard from './WordCard';
+import CharacterCard from './CharacterCard';
 
 const word = "Hello";
 function App() {
   return (
     <div>
-       <WordCard value={word}/>
+      <CharacterCard value="h"/>
+      <CharacterCard value="i"/>
     </div>
+
   );
    
 }
