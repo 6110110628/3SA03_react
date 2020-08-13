@@ -13,7 +13,7 @@ export default function CharacterCard(props) {
     
     useEffect(() => {
         if(attemptRef.current != props.attempt){
-            setActive(false)
+            setActive(false);
             attemptRef.current = props.attempt
         }
     })
