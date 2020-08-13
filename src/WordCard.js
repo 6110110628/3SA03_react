@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 export default function WordCard(props){
 
-    const [state, setState] = useState(pr)
+    const [state, setState] = useState(prepareStateFromWord(props.value))
     
     const activationHandler = c => { 
         console.log(`${c} has been activated.`) 
@@ -13,7 +13,7 @@ export default function WordCard(props){
     return (
         <div>
             { 
-                Array.from(props.value).map((c, i) => 
+                state.chars.map((c, i) => 
                     <CharacterCard value={c} key={i} activationHandler={activationHandler}/>
                 ) 
             }
