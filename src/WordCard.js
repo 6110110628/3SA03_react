@@ -15,7 +15,7 @@ const prepareStateFromWord = given_word => {
 export default function WordCard(props){
     const [state, setState] = useState(prepareStateFromWord(props.value))
     const activationHandler = c => {
-        console.log(${c} has been activated)
+        console.log(`${c} has been activated.`)
         let guess = state.guess + c
         console.log(guess)
         setState({...state, guess})

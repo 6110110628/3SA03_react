@@ -14,7 +14,7 @@ export default function CharacterCard(props) {
             attemptRef.current = props.attempt
         }
     })
-    const className = card ${active ? 'activeCard': ''}
+    const className = `card ${active ? 'activeCard': ''}`
     return (
         <div className={className} onClick={activate}>{props.value}</div>
     )
