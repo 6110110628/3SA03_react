@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import _, { attempt } from 'lodash';
 import CharacterCard from './CharacterCard';
+
+var count_win = 0;
 const prepareStateFromWord = given_word => {
     let word = given_word.toUpperCase()
     let chars = _.shuffle(Array.from(word))
     return {
         word,
         chars,
-        attempt: 1, // เล่นครั้งที่เท่าไหร่
-        guess: '', // คลิกไปกี่ครั้งแล้ว
-        complete: false // การเล่นจบแล้วหรือยัง
+        attempt: 1, // รอบการเล่น
+        guess: '', // จำนวนคลิ๊ก
+        complete: false, // การเล่นจบแล้วหรือยัง
     }
 }
 export default function WordCard(props){
@@ -23,11 +25,17 @@ export default function WordCard(props){
             if(guess == state.word) {
                 console.log('yeah!')
                 setState({...state, completed: true})
+                count_win++;
             }
             else {
                 console.log('rest, next attempt')
                 setState({...state, guess: '' , attempt: state.attempt + 1})
             }
+            if(count_win == 5){
+                
+                console.log('You Pass!')
+            }
+            
         }
     }
     return (
