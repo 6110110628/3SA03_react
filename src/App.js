@@ -12,6 +12,7 @@ function App() {
 
     <body>
       <center><br></br><h1>Welcome to Spell Word Game!</h1><br></br></center>
+      <button><a href="http://localhost:3000/" >New Game</a></button>
 
     <div>
       <WordCard value={word1}/>

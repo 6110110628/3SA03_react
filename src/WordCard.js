@@ -23,17 +23,18 @@ export default function WordCard(props){
         setState({...state, guess})
         if(guess.length == state.word.length) {
             if(guess == state.word) {
-                console.log('yeah!')
-                setState({...state, completed: true})
                 count_win++;
+                console.log('yeah! your score : '+count_win)
+                alert('yeah! your score : '+count_win)
+                setState({...state, completed: true})
             }
             else {
-                console.log('rest, next attempt')
+                console.log('rest, next attempt')               
                 setState({...state, guess: '' , attempt: state.attempt + 1})
             }
             if(count_win == 5){
-                
-                console.log('You Pass!')
+                console.log('Congrats!')
+                alert('Congrats!')
             }
             
         }

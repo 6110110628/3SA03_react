@@ -7,9 +7,26 @@
   margin: 1em;
   user-select: none;
  }
+
+body {
+  font-family: monospace;
+  font-weight: 150;
+  color: white;
+  background-color:rgb(190, 207, 255);
+  background-image: url("https://img.wallpapersafari.com/desktop/1280/1024/40/93/6Oym0A.png");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  
+}
  
- .activeCard {
+.activeCard {
   color: blue;
   background: gray;
- }
+}
+
+.h01 {
+  background-image: url("https://image.freepik.com/free-vector/cute-cat-kitten-family-cartoon-doodle-banner_40564-293.jpg");
+  background-size: 325px 250px;
+  background-color: slateblue;
+}
  
